@@ -32,14 +32,12 @@ terraform {
       source  = "hashicorp/http"
     }
   }
-  #  backend "s3" {
-  #    # Replace this with your bucket name!
-  #    bucket         = "ops360primecloud-tfstate-poc"
-  #    key            = "setup/terraform.tfstate.dev"
-  #    region         = "us-east-1"
+    backend "s3" {
+      # Replace this with your bucket name!
+      bucket         = "ops360primecloud-tfstate-poc"
+      key            = "test/terraform.tfstate.dev"
+      region         = "us-east-1"
 
-  #    # Replace this with your DynamoDB table name!
-  #    dynamodb_table = "nvirginia_tfstate_locks_dev"
-  #    encrypt        = true
-  #  }
+      encrypt        = true
+    }
 }
