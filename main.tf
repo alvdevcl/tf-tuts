@@ -1,3 +1,6 @@
+provider "aws" {
+}
+
 resource "aws_instance" "my_vm" {
  ami           = data.aws_ami.amazon_linux.id
  instance_type = var.instance_type
@@ -6,3 +9,4 @@ resource "aws_instance" "my_vm" {
    Name = var.name_tag,
  }
 }
+
