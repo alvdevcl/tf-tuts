@@ -35,9 +35,8 @@ terraform {
     backend "s3" {
       # Replace this with your bucket name!
       bucket         = "ops360primecloud-tfstate-poc"
-      key            = "test/terraform.tfstate.dev"
+      key            = "test/terraform.tfstate"
       region         = "us-east-1"
 
-      encrypt        = true
     }
 }
