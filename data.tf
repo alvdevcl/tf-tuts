@@ -28,9 +28,6 @@ data "aws_ami" "windows-2022" {
 }
 
 
-data "aws_vpc" "vpc" {
-  id = module.vpc.vpc_id
-}
 
 data "aws_ami" "latest_amazon_linux" {
   owners      = ["amazon"]
@@ -64,7 +61,3 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-
-data "aws_ecrpublic_authorization_token" "token" {
-  provider = aws.virginia
-}
