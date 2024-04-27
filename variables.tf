@@ -16,7 +16,7 @@ variable "name_tag" {
    default     = "My EC2 Instance"
 }
 
-variable region {
+variable aws_region {
   type        = string
   description = "AWS REgion"
 }
